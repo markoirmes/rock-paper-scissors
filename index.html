@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="row">
+      <div class="column">
+        <input type="radio" id="computerRock" />
+        <img
+          src="./images/questionmark.png"
+          width="100"
+          height="100"
+          name="computerChoice"
+          id="cimg1"
+        />
+      </div>
+      <div class="column">
+        <input type="radio" id="computerPaper" />
+        <img
+          src="./images/questionmark.png"
+          width="100"
+          height="100"
+          id="cimg2"
+          name="computerChoice"
+        />
+      </div>
+      <div class="column">
+        <input type="radio" id="computerScissors" />
+        <img
+          src="./images/questionmark.png"
+          width="100"
+          height="100"
+          id="cimg3"
+          name="computerChoice"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="column buttons">
+        <input
+          type="button"
+          value="Fight"
+          id="buttonFight"
+          onclick="fight()"
+          class="button"
+        />
+        <input
+          type="button"
+          value="New game"
+          id="buttonNewGame"
+          onclick="reset()"
+          class="button"
+        />
+        <p id="displayResult">Game Result:</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column"></div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <!-- user choice rock-->
+        <img src="./images/rock.png" width="100" height="100" id="uimg1" />
+        <input
+          type="radio"
+          name="userChoice"
+          value="Rock"
+          id="choseRock"
+          onchange="addUserImageBorder()"
+        />
+      </div>
+      <div class="column">
+        <!-- user choice paper-->
+        <img src="./images/paper.png" width="100" height="100" id="uimg2" />
+        <input
+          type="radio"
+          name="userChoice"
+          value="Paper"
+          id="chosePaper"
+          onchange="addUserImageBorder()"
+        />
+      </div>
+      <div class="column">
+        <!-- user choice scissors-->
+        <img src="./images/scissors.png" width="100" height="100" id="uimg3" />
+        <input
+          type="radio"
+          name="userChoice"
+          value="Scissors"
+          id="choseScissors"
+          onchange="addUserImageBorder()"
+        />
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

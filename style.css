@@ -1,0 +1,65 @@
+html,
+body,
+div,
+p,
+.button,
+.column,
+.row {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+}
+
+#computerRock,
+#computerPaper,
+#computerScissors {
+  display: none;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  margin: 10px;
+}
+
+.blueBorder {
+  box-shadow: 0px 0px 0px 5px blue;
+  transition: box-shadow 0.2s linear;
+}
+
+.redBorder {
+  box-shadow: 0px 0px 0px 5px red;
+  transition: box-shadow 0.2s linear;
+}
+
+.column.buttons {
+  margin: 100px 0px 25px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: unset;
+}
+
+.button {
+  width: 150px;
+  margin: 10px;
+}
+
+#displayResult {
+  margin: 25px 0px 100px 0px;
+}
