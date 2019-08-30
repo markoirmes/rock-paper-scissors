@@ -77,13 +77,14 @@ img {
 
 /* === radio button styling === */
 
-input [type="radio" i] {
+[type="radio"] {
   position: absolute;
+  left: -9999px;
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-input [type="radio" i] + img {
+[type="radio"] + img {
   cursor: pointer;
 }
