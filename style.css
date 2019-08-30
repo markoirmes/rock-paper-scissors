@@ -48,11 +48,12 @@ img {
 }
 
 .column.buttons {
-  margin: 100px 0px 25px 0px;
+  margin: 100px 0px 100px 0px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: unset;
+  flex-wrap: wrap;
 }
 
 .button {
@@ -61,5 +62,10 @@ img {
 }
 
 #displayResult {
-  margin: 25px 0px 100px 0px;
+  margin: 25px 0px;
+}
+
+.break {
+  height: 0px;
+  flex-basis: 100%;
 }
