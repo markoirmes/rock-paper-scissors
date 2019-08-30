@@ -63,39 +63,51 @@
     <div class="row">
       <div class="column"></div>
     </div>
-    <div class="row">
+    <div class="row userImages">
       <div class="column">
         <!-- user choice rock-->
-        <img src="./images/rock.png" width="100" height="100" id="uimg1" />
-        <input
-          type="radio"
-          name="userChoice"
-          value="Rock"
-          id="choseRock"
-          onchange="addUserImageBorder()"
-        />
+        <label>
+          <input
+            type="radio"
+            name="userChoice"
+            value="Rock"
+            id="choseRock"
+            onchange="addUserImageBorder()"
+          />
+          <img src="./images/rock.png" width="100" height="100" id="uimg1" />
+        </label>
       </div>
       <div class="column">
         <!-- user choice paper-->
-        <img src="./images/paper.png" width="100" height="100" id="uimg2" />
-        <input
-          type="radio"
-          name="userChoice"
-          value="Paper"
-          id="chosePaper"
-          onchange="addUserImageBorder()"
-        />
+
+        <label>
+          <input
+            type="radio"
+            name="userChoice"
+            value="Paper"
+            id="chosePaper"
+            onchange="addUserImageBorder()"
+          />
+          <img src="./images/paper.png" width="100" height="100" id="uimg2" />
+        </label>
       </div>
       <div class="column">
         <!-- user choice scissors-->
-        <img src="./images/scissors.png" width="100" height="100" id="uimg3" />
-        <input
-          type="radio"
-          name="userChoice"
-          value="Scissors"
-          id="choseScissors"
-          onchange="addUserImageBorder()"
-        />
+        <label>
+          <input
+            type="radio"
+            name="userChoice"
+            value="Scissors"
+            id="choseScissors"
+            onchange="addUserImageBorder()"
+          />
+          <img
+            src="./images/scissors.png"
+            width="100"
+            height="100"
+            id="uimg3"
+          />
+        </label>
       </div>
     </div>
     <script src="./app.js"></script>
