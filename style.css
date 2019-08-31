@@ -7,14 +7,27 @@ p,
 .row {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
+  color: #fff;
+}
+
+body {
+  background-image: linear-gradient(
+    89.7deg,
+    rgba(0, 32, 95, 1) 2.8%,
+    rgba(132, 53, 142, 1) 97.8%
+  );
 }
 
 .row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 1000px;
+  width: 500px;
   margin: 0 auto;
+}
+
+.row:first-of-type {
+  margin-top: 150px;
 }
 
 .column {
@@ -28,27 +41,17 @@ img {
   width: 100px;
   height: 100px;
   box-sizing: border-box;
-  margin: 10px;
-}
-
-.userImages img {
   opacity: 0.5;
   transition: opacity 0.2s linear;
 }
-
-.userImages img:hover {
+img:hover {
   opacity: 1;
 }
 
-.redBorder {
-  opacity: 1;
-  box-shadow: 0px 0px 0px 5px red;
-  transition: box-shadow 0.2s linear;
-}
-
-.blueBorder {
+.whiteBorder {
   opacity: 1 !important;
-  box-shadow: 0px 0px 0px 5px blue;
+  box-shadow: 0px 0px 0px 5px #fff;
+  border-radius: 150px;
   transition: box-shadow 0.2s linear;
 }
 
@@ -64,6 +67,7 @@ img {
 .button {
   width: 150px;
   margin: 10px;
+  color: #000;
 }
 
 #displayResult {
@@ -79,7 +83,6 @@ img {
 
 [type="radio"] {
   position: absolute;
-  left: -9999px;
   opacity: 0;
   width: 0;
   height: 0;
@@ -87,4 +90,12 @@ img {
 
 [type="radio"] + img {
   cursor: pointer;
+}
+
+#rockCanvas {
+  background: url("./images/rock.png");
+  background-size: 130px;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: content-box;
 }

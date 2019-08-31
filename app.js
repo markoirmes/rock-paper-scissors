@@ -26,21 +26,21 @@ function addUserImageBorder() {
   if (userChoiceRock.checked === true) {
     userChoicePaper.checked = false;
     userChoiceScissors.checked = false;
-    uimgRock.classList.add("blueBorder");
-    uimgPaper.classList.remove("blueBorder");
-    uimgScissors.classList.remove("blueBorder");
+    uimgRock.classList.add("whiteBorder");
+    uimgPaper.classList.remove("whiteBorder");
+    uimgScissors.classList.remove("whiteBorder");
   } else if (userChoicePaper.checked === true) {
     userChoiceRock.checked = false;
     userChoiceScissors.checked = false;
-    uimgPaper.classList.add("blueBorder");
-    uimgRock.classList.remove("blueBorder");
-    uimgScissors.classList.remove("blueBorder");
+    uimgPaper.classList.add("whiteBorder");
+    uimgRock.classList.remove("whiteBorder");
+    uimgScissors.classList.remove("whiteBorder");
   } else if (userChoiceScissors.checked === true) {
     userChoicePaper.checked = false;
     userChoiceRock.checked = false;
-    uimgScissors.classList.add("blueBorder");
-    uimgPaper.classList.remove("blueBorder");
-    uimgRock.classList.remove("blueBorder");
+    uimgScissors.classList.add("whiteBorder");
+    uimgPaper.classList.remove("whiteBorder");
+    uimgRock.classList.remove("whiteBorder");
   } else {
     //do nothing
   }
@@ -67,13 +67,13 @@ function getComputerChoice() {
   // reveal computer choice and add border to image
 
   if (computerChoiceRock.checked) {
-    cimgRock.classList.add("redBorder");
+    cimgRock.classList.add("whiteBorder");
     cimgRock.setAttribute("src", "./images/rock.png");
   } else if (computerChoicePaper.checked) {
-    cimgPaper.classList.add("redBorder");
+    cimgPaper.classList.add("whiteBorder");
     cimgPaper.setAttribute("src", "./images/paper.png");
   } else if (computerChoiceScissors.checked) {
-    cimgScissors.classList.add("redBorder");
+    cimgScissors.classList.add("whiteBorder");
     cimgScissors.setAttribute("src", "./images/scissors.png");
   } else {
     //do nothing
@@ -172,12 +172,12 @@ function reset() {
   cimgScissors.setAttribute("src", "./images/questionmark.png");
   cimgPaper.setAttribute("src", "./images/questionmark.png");
   cimgRock.setAttribute("src", "./images/questionmark.png");
-  cimgPaper.classList.remove("redBorder");
-  cimgRock.classList.remove("redBorder");
-  cimgScissors.classList.remove("redBorder");
-  uimgPaper.classList.remove("blueBorder");
-  uimgRock.classList.remove("blueBorder");
-  uimgScissors.classList.remove("blueBorder");
+  cimgPaper.classList.remove("whiteBorder");
+  cimgRock.classList.remove("whiteBorder");
+  cimgScissors.classList.remove("whiteBorder");
+  uimgPaper.classList.remove("whiteBorder");
+  uimgRock.classList.remove("whiteBorder");
+  uimgScissors.classList.remove("whiteBorder");
   userChoicePaper.checked = false;
   userChoiceRock.checked = false;
   userChoiceScissors.checked = false;
@@ -191,3 +191,49 @@ function reset() {
   computerChoiceRock.disabled = false;
   computerChoiceScissors.disabled = false;
 }
+
+/* canvas animation circle around image 
+
+
+(function() {
+  var requestAnimationFrame =
+    window.requestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.msRequestAnimationFrame;
+  window.requestAnimationFrame = requestAnimationFrame;
+})();
+
+var canvas = document.getElementsByClassName("canvas")[0];
+var context = canvas.getContext("2d");
+var x = canvas.width / 2;
+var y = canvas.height / 2;
+var radius = 75;
+var endPercent = 101;
+var curPerc = 0;
+var counterClockwise = false;
+var circ = Math.PI * 2;
+var quart = Math.PI / 2;
+
+context.lineWidth = 5;
+context.strokeStyle = "#fff";
+context.shadowOffsetX = 0;
+context.shadowOffsetY = 0;
+context.shadowBlur = 10;
+context.shadowColor = "#656565";
+
+function animate(current) {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  context.beginPath();
+  context.arc(x, y, radius, -quart, circ * current - quart, false);
+  context.stroke();
+  curPerc++;
+  if (curPerc < endPercent) {
+    requestAnimationFrame(function() {
+      animate(curPerc / 30);
+    });
+  }
+}
+
+animate();
+*/
